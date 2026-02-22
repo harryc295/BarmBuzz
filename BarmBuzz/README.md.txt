@@ -180,6 +180,14 @@ Scope: used on Nottingham OU which affects all users in the OU.
     GP report of Nottingham user "\Evidence\Screenshots\GPRnottinghamuser.png"
 
     Automated validation tests pass "\Evidence\Screenshots\Pester_Results.png"
+	 
+    GitHub repository link ("\Evidence\Git\RepoLink.txt")
+
+    Git commit history ("\Evidence\Git\GitLog.txt")
+
+    Git contribution stats ("\Evidence\Git\Stats.txt")
+
+    Development reflogs ("\Evidence\Git\Reflog\")
 
 10. Limitations
 
