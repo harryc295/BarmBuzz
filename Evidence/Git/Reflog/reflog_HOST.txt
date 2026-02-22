@@ -1,4 +1,6 @@
-﻿dbef0e3 HEAD@{0}: Branch: renamed refs/heads/main to refs/heads/main
-dbef0e3 HEAD@{2}: commit: Final submission ÔÇô all project files and evidence
-7226e61 HEAD@{3}: Branch: renamed refs/heads/master to refs/heads/main
-7226e61 HEAD@{5}: commit (initial): Inital folder structure
+﻿ff4fdcb HEAD@{0}: merge origin/main: Merge made by the 'ort' strategy.
+cbdbdd6 HEAD@{1}: commit: Add Git evidence and update README
+dbef0e3 HEAD@{2}: Branch: renamed refs/heads/main to refs/heads/main
+dbef0e3 HEAD@{4}: commit: Final submission ÔÇô all project files and evidence
+7226e61 HEAD@{5}: Branch: renamed refs/heads/master to refs/heads/main
+7226e61 HEAD@{7}: commit (initial): Inital folder structure
