@@ -1,0 +1,50 @@
+@{
+    # Define OUs
+    OUs = @(
+        @{
+            Name = "Nottingham"
+            Path = "DC=derby,DC=bolton,DC=local"
+        }
+        # Add any other OUs you created (e.g., for Bolton if any)
+    )
+
+    # Define Users
+    Users = @(
+        @{
+            Name = "BoltonUser"
+            SamAccountName = "boltonuser"
+            Domain = "bolton.local"
+            GivenName = "Bolton"
+            Surname = "User"
+            Password = "Password123!"
+            Enabled = $true
+        }
+        @{
+            Name = "DerbyUser"
+            SamAccountName = "derbyuser"
+            Domain = "derby.bolton.local"
+            GivenName = "Derby"
+            Surname = "User"
+            Password = "Password123!"
+            Enabled = $true
+        }
+    )
+
+    # Define Groups
+    Groups = @(
+        @{
+            Name = "BoltonUsers"
+            SamAccountName = "BoltonUsers"
+            Domain = "bolton.local"
+            GroupScope = "Global"
+            Members = @("boltonuser")
+        }
+        @{
+            Name = "DerbyAccessGroup"
+            SamAccountName = "DerbyAccessGroup"
+            Domain = "derby.bolton.local"
+            GroupScope = "Global"
+            Members = @("derbyuser")
+        }
+    )
+}

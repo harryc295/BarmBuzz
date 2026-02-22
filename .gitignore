@@ -1,0 +1,11 @@
+﻿# Ignore temporary files
+*.log
+*.tmp
+*.bak
+# Ignore user‑specific files
+.vscode/
+.idea/
+# Ignore large binaries (if any)
+*.iso
+*.vhd
+*.vhdx

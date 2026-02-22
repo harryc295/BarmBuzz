@@ -1,0 +1,142 @@
+**********************
+Windows PowerShell transcript start
+Start time: 20260222125029
+Username: BOLTON\Administrator
+RunAs User: BOLTON\Administrator
+Configuration Name: 
+Machine: DC-BOLTON (Microsoft Windows NT 10.0.20348.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 4012
+PSVersion: 5.1.20348.558
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.20348.558
+BuildVersion: 10.0.20348.558
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\DSC_Transcript.txt
+PS C:\Users\Administrator> cd C:\Scripts\BarmBuzz\DSC\Scripts
+PS C:\Scripts\BarmBuzz\DSC\Scripts> .\Apply-OUAndUsers.ps1
+VERBOSE: Perform operation 'Invoke CimMethod' with following parameters, ''methodName' = SendConfigurationApply,'className' = MSFT_DSCLocalConfigurationManager,'namespaceName' = root/Microsoft/Windows/DesiredStateConfiguration'.
+VERBOSE: Perform operation 'Invoke CimMethod' with following parameters, ''methodName' = SendConfigurationApply,'className' = MSFT_DSCLocalConfigurationManager,'namespaceName' = root/Microsoft/Windows/DesiredStateConfiguration'.
+VERBOSE: Perform operation 'Invoke CimMethod' with following parameters, ''methodName' = SendConfigurationApply,'className' = MSFT_DSCLocalConfigurationManager,'namespaceName' = root/Microsoft/Windows/DesiredStateConfiguration'.
+WinRM cannot process the request. The following error occurred while using Kerberos authentication: Cannot find the 
+computer DC-DERBY. Verify that the computer exists on the network and that the name provided is spelled correctly.
+    + CategoryInfo          : NotSpecified: (root/Microsoft/...gurationManager:String) [], CimException
+    + FullyQualifiedErrorId : HRESULT 0x80070035
+    + PSComputerName        : DC-DERBY
+WinRM cannot process the request. The following error occurred while using Kerberos authentication: Cannot find the
+computer DC-DERBY. Verify that the computer exists on the network and that the name provided is spelled correctly.
+    + CategoryInfo          : NotSpecified: (root/Microsoft/...gurationManager:String) [], CimException
+    + FullyQualifiedErrorId : HRESULT 0x80070035
+    + PSComputerName        : DC-DERBY
+
+VERBOSE: Operation 'Invoke CimMethod' complete.
+VERBOSE: An LCM method call arrived from computer DC-BOLTON with user sid S-1-5-21-3916440882-2538484574-1565179008-500.
+WARNING: There is no operation running currently. Stop will return without any action.
+VERBOSE: An LCM method call arrived from computer DC-BOLTON with user sid S-1-5-21-3916440882-2538484574-1565179008-500.
+VERBOSE: [DC-BOLTON]: LCM:  [ Start  Set      ]
+VERBOSE: [DC-BOLTON]: LCM:  [ End    Set      ]
+VERBOSE: An LCM method call arrived from computer DC-BOLTON with user sid S-1-5-21-3916440882-2538484574-1565179008-500.
+The current configuration was cancelled.
+    + CategoryInfo          : NotSpecified: (root/Microsoft/...gurationManager:String) [], CimException
+    + FullyQualifiedErrorId : MI RESULT 1
+    + PSComputerName        : DC-BOLTON
+The current configuration was cancelled.
+    + CategoryInfo          : NotSpecified: (root/Microsoft/...gurationManager:String) [], CimException
+    + FullyQualifiedErrorId : MI RESULT 1
+    + PSComputerName        : DC-BOLTON
+
+VERBOSE: Operation 'Invoke CimMethod' complete.
+VERBOSE: [DC-BOLTON]: LCM:  [ Start  Set      ]
+VERBOSE: [DC-BOLTON]: LCM:  [ Start  Resource ]  [[xADOrganizationalUnit]OU_Nottingham]
+VERBOSE: [DC-BOLTON]: LCM:  [ Start  Test     ]  [[xADOrganizationalUnit]OU_Nottingham]
+VERBOSE: [DC-BOLTON]:                            [[xADOrganizationalUnit]OU_Nottingham] Retrieving OU 'Nottingham'.
+A referral was returned from the server
+    + CategoryInfo          : ResourceUnavailable: (:) [], CimException
+    + FullyQualifiedErrorId : 
+ActiveDirectoryServer:8235,Microsoft.ActiveDirectory.Management.Commands.GetADOrganizationalUnit
+    + PSComputerName        : localhost
+A referral was returned from the server
+    + CategoryInfo          : ResourceUnavailable: (:) [], CimException
+    + FullyQualifiedErrorId : ActiveDirectoryServer:8235,Microsoft.ActiveDirectory.Management.Commands.GetADOrganizati
+   onalUnit
+    + PSComputerName        : localhost
+
+VERBOSE: [DC-BOLTON]:                            [[xADOrganizationalUnit]OU_Nottingham] OU 'Nottingham' does not exist when it should exist.
+VERBOSE: [DC-BOLTON]: LCM:  [ End    Test     ]  [[xADOrganizationalUnit]OU_Nottingham]  in 0.7250 seconds.
+The PowerShell DSC resource '[xADOrganizationalUnit]OU_Nottingham' with SourceInfo 
+'C:\Scripts\BarmBuzz\DSC\Configurations\CreateOUAndUsers.ps1::18::17::xADOrganizationalUnit' threw one or more 
+non-terminating errors while running the Test-TargetResource functionality. These errors are logged to the ETW channel 
+called Microsoft-Windows-DSC/Operational. Refer to this channel for more details.
+    + CategoryInfo          : InvalidOperation: (:) [], CimException
+    + FullyQualifiedErrorId : NonTerminatingErrorFromProvider
+    + PSComputerName        : localhost
+The PowerShell DSC resource '[xADOrganizationalUnit]OU_Nottingham' with SourceInfo
+'C:\Scripts\BarmBuzz\DSC\Configurations\CreateOUAndUsers.ps1::18::17::xADOrganizationalUnit' threw one or more
+non-terminating errors while running the Test-TargetResource functionality. These errors are logged to the ETW channel
+called Microsoft-Windows-DSC/Operational. Refer to this channel for more details.
+    + CategoryInfo          : InvalidOperation: (:) [], CimException
+    + FullyQualifiedErrorId : NonTerminatingErrorFromProvider
+    + PSComputerName        : localhost
+
+VERBOSE: [DC-BOLTON]: LCM:  [ Start  Resource ]  [[xADUser]User_derbyuser]
+VERBOSE: [DC-BOLTON]: LCM:  [ Start  Test     ]  [[xADUser]User_derbyuser]
+VERBOSE: [DC-BOLTON]:                            [[xADUser]User_derbyuser] Retrieving Active Directory user 'derbyuser' (derbyuser@derby.bolton.local) ...
+VERBOSE: [DC-BOLTON]:                            [[xADUser]User_derbyuser] Active Directory user 'derbyuser' (derbyuser@derby.bolton.local) was NOT present.
+VERBOSE: [DC-BOLTON]:                            [[xADUser]User_derbyuser] Creating connection to Active Directory domain 'derby.bolton.local' ...
+VERBOSE: [DC-BOLTON]:                            [[xADUser]User_derbyuser] Checking Active Directory user 'derbyuser' password ...
+VERBOSE: [DC-BOLTON]:                            [[xADUser]User_derbyuser] User 'Ensure' property is NOT in the desired state. Expected 'Present', actual 'Absent'.
+VERBOSE: [DC-BOLTON]:                            [[xADUser]User_derbyuser] User 'UserPrincipalName' property is NOT in the desired state. Expected 'derbyuser@derby.bolton.local', actual ''.
+VERBOSE: [DC-BOLTON]:                            [[xADUser]User_derbyuser] User 'GivenName' property is NOT in the desired state. Expected 'Derby', actual ''.
+VERBOSE: [DC-BOLTON]:                            [[xADUser]User_derbyuser] User 'Surname' property is NOT in the desired state. Expected 'User', actual ''.
+VERBOSE: [DC-BOLTON]:                            [[xADUser]User_derbyuser] User 'Enabled' property is NOT in the desired state. Expected 'True', actual ''.
+VERBOSE: [DC-BOLTON]: LCM:  [ End    Test     ]  [[xADUser]User_derbyuser]  in 0.1150 seconds.
+VERBOSE: [DC-BOLTON]: LCM:  [ Start  Set      ]  [[xADUser]User_derbyuser]
+VERBOSE: [DC-BOLTON]:                            [[xADUser]User_derbyuser] Retrieving Active Directory user 'derbyuser' (derbyuser@derby.bolton.local) ...
+VERBOSE: [DC-BOLTON]:                            [[xADUser]User_derbyuser] Active Directory user 'derbyuser' (derbyuser@derby.bolton.local) was NOT present.
+VERBOSE: [DC-BOLTON]:                            [[xADUser]User_derbyuser] Adding Active Directory user 'derbyuser'.
+VERBOSE: [DC-BOLTON]:                            [[xADUser]User_derbyuser] Retrieving Active Directory user 'derbyuser' (derbyuser@derby.bolton.local) ...
+VERBOSE: [DC-BOLTON]:                            [[xADUser]User_derbyuser] Active Directory user 'derbyuser' (derbyuser@derby.bolton.local) is present.
+VERBOSE: [DC-BOLTON]:                            [[xADUser]User_derbyuser] Creating connection to Active Directory domain 'derby.bolton.local' ...
+VERBOSE: [DC-BOLTON]:                            [[xADUser]User_derbyuser] Checking Active Directory user 'derbyuser' password ...
+VERBOSE: [DC-BOLTON]:                            [[xADUser]User_derbyuser] Updating user property 'UserPrincipalName' with/to 'derbyuser@derby.bolton.local'.
+VERBOSE: [DC-BOLTON]:                            [[xADUser]User_derbyuser] Updating user property 'GivenName' with/to 'Derby'.
+VERBOSE: [DC-BOLTON]:                            [[xADUser]User_derbyuser] Updating user property 'Surname' with/to 'User'.
+VERBOSE: [DC-BOLTON]:                            [[xADUser]User_derbyuser] Updating user property 'Enabled' with/to 'True'.
+VERBOSE: [DC-BOLTON]:                            [[xADUser]User_derbyuser] Updating Active Directory user 'derbyuser'.
+VERBOSE: [DC-BOLTON]: LCM:  [ End    Set      ]  [[xADUser]User_derbyuser]  in 0.4610 seconds.
+VERBOSE: [DC-BOLTON]: LCM:  [ End    Resource ]  [[xADUser]User_derbyuser]
+VERBOSE: [DC-BOLTON]: LCM:  [ Start  Resource ]  [[xADGroup]Group_DerbyAccessGroup]
+VERBOSE: [DC-BOLTON]: LCM:  [ Start  Test     ]  [[xADGroup]Group_DerbyAccessGroup]
+VERBOSE: [DC-BOLTON]:                            [[xADGroup]Group_DerbyAccessGroup] AD Group 'DerbyAccessGroup' was not found
+VERBOSE: [DC-BOLTON]:                            [[xADGroup]Group_DerbyAccessGroup] Group membership is NOT in the desired state.
+VERBOSE: [DC-BOLTON]:                            [[xADGroup]Group_DerbyAccessGroup] AD Group 'Ensure' is not correct. Expected 'Present', actual 'Absent'
+VERBOSE: [DC-BOLTON]: LCM:  [ End    Test     ]  [[xADGroup]Group_DerbyAccessGroup]  in 0.0290 seconds.
+VERBOSE: [DC-BOLTON]: LCM:  [ Start  Set      ]  [[xADGroup]Group_DerbyAccessGroup]
+VERBOSE: [DC-BOLTON]:                            [[xADGroup]Group_DerbyAccessGroup] AD Group 'DerbyAccessGroup' was not found
+VERBOSE: [DC-BOLTON]:                            [[xADGroup]Group_DerbyAccessGroup] Adding AD Group 'DerbyAccessGroup'
+VERBOSE: [DC-BOLTON]:                            [[xADGroup]Group_DerbyAccessGroup] Adding '1' member(s) to AD group 'DerbyAccessGroup'.
+VERBOSE: [DC-BOLTON]: LCM:  [ End    Set      ]  [[xADGroup]Group_DerbyAccessGroup]  in 0.1510 seconds.
+VERBOSE: [DC-BOLTON]: LCM:  [ End    Resource ]  [[xADGroup]Group_DerbyAccessGroup]
+VERBOSE: [DC-BOLTON]: LCM:  [ End    Set      ]
+The SendConfigurationApply function did not succeed.
+    + CategoryInfo          : NotSpecified: (root/Microsoft/...gurationManager:String) [], CimException
+    + FullyQualifiedErrorId : MI RESULT 1
+    + PSComputerName        : localhost
+The SendConfigurationApply function did not succeed.
+    + CategoryInfo          : NotSpecified: (root/Microsoft/...gurationManager:String) [], CimException
+    + FullyQualifiedErrorId : MI RESULT 1
+    + PSComputerName        : localhost
+
+VERBOSE: Operation 'Invoke CimMethod' complete.
+VERBOSE: Time taken for configuration job to complete is 7.057 seconds
+
+
+PS C:\Scripts\BarmBuzz\DSC\Scripts> Stop-Transcript
+**********************
+Windows PowerShell transcript end
+End time: 20260222125048
+**********************

@@ -1,0 +1,14 @@
+#ai useage log
+
+## 1. what ai was used
+- Deepseek , kimi Moonshot and Grammarly
+- Used for bug fixes brainstorming and spell checking within the university's allowed disability guidelines
+
+##2. what tasks were used?
+- Debugging and helping with Powershell and DSC scripts when they failed + generating rough templates 
+- Proof reading
+- Fixing problems e.g. domain join issues on Windows 11 and Ubuntu
+- Helping me learn what error messages meant etc
+
+## 3. Ownership
+I checked overall all the code and adjusted it personally that i got from the templates from github and via AI to make sure it was my own work, the submission shows my understanding and I am responsible for all my work etc.

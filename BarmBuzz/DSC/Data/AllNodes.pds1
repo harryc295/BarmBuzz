@@ -1,0 +1,16 @@
+@{
+    AllNodes = @(
+        @{
+            NodeName = 'DC-BOLTON'
+            Role = 'RootDC'
+            DomainName = 'bolton.local'
+            IPAddress = '192.168.50.1'
+        }
+        @{
+            NodeName = 'DC-DERBY'
+            Role = 'ChildDC'
+            DomainName = 'derby.bolton.local'
+            IPAddress = '192.168.50.2'
+        }
+    )
+}

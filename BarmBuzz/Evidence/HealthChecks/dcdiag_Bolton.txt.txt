@@ -1,0 +1,183 @@
+
+Directory Server Diagnosis
+
+Performing initial setup:
+   Trying to find home server...
+   Home Server = DC-BOLTON
+   * Identified AD Forest. 
+   Done gathering initial info.
+
+Doing initial required tests
+   
+   Testing server: Default-First-Site-Name\DC-BOLTON
+      Starting test: Connectivity
+         ......................... DC-BOLTON passed test Connectivity
+
+Doing primary tests
+   
+   Testing server: Default-First-Site-Name\DC-BOLTON
+      Starting test: Advertising
+         ......................... DC-BOLTON passed test Advertising
+      Starting test: FrsEvent
+         ......................... DC-BOLTON passed test FrsEvent
+      Starting test: DFSREvent
+         There are warning or error events within the last 24 hours after the
+         SYSVOL has been shared.  Failing SYSVOL replication problems may cause
+         Group Policy problems. 
+         ......................... DC-BOLTON passed test DFSREvent
+      Starting test: SysVolCheck
+         ......................... DC-BOLTON passed test SysVolCheck
+      Starting test: KccEvent
+         A warning event occurred.  EventID: 0x80000603
+            Time Generated: 02/22/2026   06:10:40
+            Event String:
+            Active Directory Domain Services could not disable the software-based disk write cache on the following hard disk. 
+
+         A warning event occurred.  EventID: 0x80000BEB
+            Time Generated: 02/22/2026   06:10:46
+            Event String:
+            The directory has been configured to not enforce per-attribute authorization during LDAP add operations. Warning events will be logged, but no requests will be blocked. 
+
+         A warning event occurred.  EventID: 0x80000BEE
+            Time Generated: 02/22/2026   06:10:46
+            Event String:
+            The directory has been configured to allow implicit owner privileges when initially setting or modifying the nTSecurityDescriptor attribute during LDAP add and modify operations. Warning events will be logged, but no requests will be blocked. 
+
+         A warning event occurred.  EventID: 0x80000B46
+            Time Generated: 02/21/2026   22:11:01
+            Event String:
+            The security of this directory server can be significantly enhanced by configuring the server to reject SASL (Negotiate, Kerberos, NTLM, or Digest) LDAP binds that do not request signing (integrity verification) and LDAP simple binds that are performed on a clear text (non-SSL/TLS-encrypted) connection.  Even if no clients are using such binds, configuring the server to reject them will improve the security of this server. 
+
+         A warning event occurred.  EventID: 0x80000BE1
+            Time Generated: 02/21/2026   22:11:01
+            Event String:
+            The security of this directory server can be significantly enhanced by configuring the server to enforce  validation of Channel Binding Tokens received in LDAP bind requests sent over LDAPS connections. Even if  no clients are issuing LDAP bind requests over LDAPS, configuring the server to validate Channel Binding  Tokens will improve the security of this server. 
+
+         A warning event occurred.  EventID: 0x80000786
+            Time Generated: 02/21/2026   22:16:44
+            Event String:
+            The attempt to establish a replication link to a read-only directory partition with the following parameters failed. 
+
+         ......................... DC-BOLTON passed test KccEvent
+      Starting test: KnowsOfRoleHolders
+         ......................... DC-BOLTON passed test KnowsOfRoleHolders
+      Starting test: MachineAccount
+         ......................... DC-BOLTON passed test MachineAccount
+      Starting test: NCSecDesc
+         ......................... DC-BOLTON passed test NCSecDesc
+      Starting test: NetLogons
+         ......................... DC-BOLTON passed test NetLogons
+      Starting test: ObjectsReplicated
+         ......................... DC-BOLTON passed test ObjectsReplicated
+      Starting test: Replications
+         ......................... DC-BOLTON passed test Replications
+      Starting test: RidManager
+         ......................... DC-BOLTON passed test RidManager
+      Starting test: Services
+         ......................... DC-BOLTON passed test Services
+      Starting test: SystemLog
+         A warning event occurred.  EventID: 0x80040022
+            Time Generated: 02/22/2026   06:10:40
+            Event String:
+            The driver disabled the write cache on device \Device\Harddisk0\DR0.
+         A warning event occurred.  EventID: 0x80040022
+            Time Generated: 02/22/2026   06:10:40
+            Event String:
+            The driver disabled the write cache on device \Device\Harddisk0\DR0.
+         A warning event occurred.  EventID: 0x80040022
+            Time Generated: 02/22/2026   06:10:40
+            Event String:
+            The driver disabled the write cache on device \Device\Harddisk0\DR0.
+         A warning event occurred.  EventID: 0x000003F6
+            Time Generated: 02/21/2026   22:10:58
+            Event String:
+            Name resolution for the name wpad timed out after none of the configured DNS servers responded.
+         A warning event occurred.  EventID: 0x000003F6
+            Time Generated: 02/21/2026   22:10:59
+            Event String:
+            Name resolution for the name _ldap._tcp.dc._msdcs.bolton.local. timed out after none of the configured DNS servers responded.
+         A warning event occurred.  EventID: 0x000003F6
+            Time Generated: 02/21/2026   22:10:59
+            Event String:
+            Name resolution for the name _ldap._tcp.dc._msdcs.bolton.local. timed out after none of the configured DNS servers responded.
+         A warning event occurred.  EventID: 0x000003F6
+            Time Generated: 02/21/2026   22:11:00
+            Event String:
+            Name resolution for the name _ldap._tcp.dc._msdcs.bolton.local. timed out after none of the configured DNS servers responded.
+         A warning event occurred.  EventID: 0x000003F6
+            Time Generated: 02/21/2026   22:11:01
+            Event String:
+            Name resolution for the name _ldap._tcp.dc._msdcs.bolton.local. timed out after none of the configured DNS servers responded.
+         A warning event occurred.  EventID: 0x000003F6
+            Time Generated: 02/21/2026   22:11:03
+            Event String:
+            Name resolution for the name _ldap._tcp.dc._msdcs.bolton.local. timed out after none of the configured DNS servers responded.
+         A warning event occurred.  EventID: 0x000003F6
+            Time Generated: 02/21/2026   22:11:06
+            Event String:
+            Name resolution for the name wpad timed out after none of the configured DNS servers responded.
+         A warning event occurred.  EventID: 0x000727AA
+            Time Generated: 02/21/2026   22:11:28
+            Event String:
+            The WinRM service failed to create the following SPNs: WSMAN/DC-BOLTON.bolton.local; WSMAN/DC-BOLTON. 
+
+         A warning event occurred.  EventID: 0x0000000C
+            Time Generated: 02/21/2026   22:11:36
+            Event String:
+            Time Provider NtpClient: This machine is configured to use the domain hierarchy to determine its time source, but it is the AD PDC emulator for the domain at the root of the forest, so there is no machine above it in the domain hierarchy to use as a time source. It is recommended that you either configure a reliable time service in the root domain, or manually configure the AD PDC to synchronize with an external time source. Otherwise, this machine will function as the authoritative time source in the domain hierarchy. If an external time source is not configured or used for this computer, you may choose to disable the NtpClient.
+         An error event occurred.  EventID: 0xC0001B61
+            Time Generated: 02/21/2026   22:11:53
+            Event String:
+            A timeout was reached (45000 milliseconds) while waiting for the ADWS service to connect.
+         An error event occurred.  EventID: 0xC0001B58
+            Time Generated: 02/21/2026   22:11:53
+            Event String:
+            The ADWS service failed to start due to the following error: 
+
+         A warning event occurred.  EventID: 0x00002720
+            Time Generated: 02/21/2026   22:13:03
+            Event String:
+            The application-specific permission settings do not grant Local Launch permission for the COM Server application with CLSID 
+
+         ......................... DC-BOLTON failed test SystemLog
+      Starting test: VerifyReferences
+         ......................... DC-BOLTON passed test VerifyReferences
+   
+   
+   Running partition tests on : ForestDnsZones
+      Starting test: CheckSDRefDom
+         ......................... ForestDnsZones passed test CheckSDRefDom
+      Starting test: CrossRefValidation
+         ......................... ForestDnsZones passed test
+         CrossRefValidation
+   
+   Running partition tests on : DomainDnsZones
+      Starting test: CheckSDRefDom
+         ......................... DomainDnsZones passed test CheckSDRefDom
+      Starting test: CrossRefValidation
+         ......................... DomainDnsZones passed test
+         CrossRefValidation
+   
+   Running partition tests on : Schema
+      Starting test: CheckSDRefDom
+         ......................... Schema passed test CheckSDRefDom
+      Starting test: CrossRefValidation
+         ......................... Schema passed test CrossRefValidation
+   
+   Running partition tests on : Configuration
+      Starting test: CheckSDRefDom
+         ......................... Configuration passed test CheckSDRefDom
+      Starting test: CrossRefValidation
+         ......................... Configuration passed test CrossRefValidation
+   
+   Running partition tests on : bolton
+      Starting test: CheckSDRefDom
+         ......................... bolton passed test CheckSDRefDom
+      Starting test: CrossRefValidation
+         ......................... bolton passed test CrossRefValidation
+   
+   Running enterprise tests on : bolton.local
+      Starting test: LocatorCheck
+         ......................... bolton.local passed test LocatorCheck
+      Starting test: Intersite
+         ......................... bolton.local passed test Intersite

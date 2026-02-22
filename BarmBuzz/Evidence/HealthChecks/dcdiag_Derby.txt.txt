@@ -1,0 +1,226 @@
+
+Directory Server Diagnosis
+
+Performing initial setup:
+   Trying to find home server...
+   Home Server = DC-DERBY
+   * Identified AD Forest. 
+   Done gathering initial info.
+
+Doing initial required tests
+   
+   Testing server: Default-First-Site-Name\DC-DERBY
+      Starting test: Connectivity
+         ......................... DC-DERBY passed test Connectivity
+
+Doing primary tests
+   
+   Testing server: Default-First-Site-Name\DC-DERBY
+      Starting test: Advertising
+         Warning: DC-DERBY is not advertising as a time server.
+         ......................... DC-DERBY failed test Advertising
+      Starting test: FrsEvent
+         ......................... DC-DERBY passed test FrsEvent
+      Starting test: DFSREvent
+         There are warning or error events within the last 24 hours after the
+         SYSVOL has been shared.  Failing SYSVOL replication problems may cause
+         Group Policy problems. 
+         ......................... DC-DERBY failed test DFSREvent
+      Starting test: SysVolCheck
+         ......................... DC-DERBY passed test SysVolCheck
+      Starting test: KccEvent
+         A warning event occurred.  EventID: 0x80000603
+            Time Generated: 02/22/2026   06:21:56
+            Event String:
+            Active Directory Domain Services could not disable the software-based disk write cache on the following hard disk. 
+
+         A warning event occurred.  EventID: 0x80000BEB
+            Time Generated: 02/22/2026   06:22:01
+            Event String:
+            The directory has been configured to not enforce per-attribute authorization during LDAP add operations. Warning events will be logged, but no requests will be blocked. 
+
+         A warning event occurred.  EventID: 0x80000BEE
+            Time Generated: 02/22/2026   06:22:01
+            Event String:
+            The directory has been configured to allow implicit owner privileges when initially setting or modifying the nTSecurityDescriptor attribute during LDAP add and modify operations. Warning events will be logged, but no requests will be blocked. 
+
+         A warning event occurred.  EventID: 0x80000B46
+            Time Generated: 02/21/2026   22:22:15
+            Event String:
+            The security of this directory server can be significantly enhanced by configuring the server to reject SASL (Negotiate, Kerberos, NTLM, or Digest) LDAP binds that do not request signing (integrity verification) and LDAP simple binds that are performed on a clear text (non-SSL/TLS-encrypted) connection.  Even if no clients are using such binds, configuring the server to reject them will improve the security of this server. 
+
+         A warning event occurred.  EventID: 0x80000BE1
+            Time Generated: 02/21/2026   22:22:15
+            Event String:
+            The security of this directory server can be significantly enhanced by configuring the server to enforce  validation of Channel Binding Tokens received in LDAP bind requests sent over LDAPS connections. Even if  no clients are issuing LDAP bind requests over LDAPS, configuring the server to validate Channel Binding  Tokens will improve the security of this server. 
+
+         A warning event occurred.  EventID: 0x80000828
+            Time Generated: 02/21/2026   22:22:50
+            Event String:
+            Active Directory Domain Services could not use DNS to resolve the IP address of the source domain controller listed below. To maintain the consistency of Security groups, group policy, users and computers and their passwords, Active Directory Domain Services successfully replicated using the NetBIOS or fully qualified computer name of the source domain controller. 
+
+         An error event occurred.  EventID: 0xC0000466
+            Time Generated: 02/21/2026   22:25:22
+            Event String:
+            Active Directory Domain Services was unable to establish a connection with the global catalog. 
+
+         ......................... DC-DERBY failed test KccEvent
+      Starting test: KnowsOfRoleHolders
+         [DC-BOLTON] DsBindWithSpnEx() failed with error 1722,
+         The RPC server is unavailable..
+         Warning: DC-BOLTON is the Schema Owner, but is not responding to DS
+         RPC Bind.
+         Ldap search capability attribute search failed on server DC-BOLTON,
+         return value = 81
+         Warning: DC-BOLTON is the Schema Owner, but is not responding to LDAP
+         Bind.
+         Warning: DC-BOLTON is the Domain Owner, but is not responding to DS
+         RPC Bind.
+         Warning: DC-BOLTON is the Domain Owner, but is not responding to LDAP
+         Bind.
+         ......................... DC-DERBY failed test KnowsOfRoleHolders
+      Starting test: MachineAccount
+         ......................... DC-DERBY passed test MachineAccount
+      Starting test: NCSecDesc
+         ......................... DC-DERBY passed test NCSecDesc
+      Starting test: NetLogons
+         ......................... DC-DERBY passed test NetLogons
+      Starting test: ObjectsReplicated
+         ......................... DC-DERBY passed test ObjectsReplicated
+      Starting test: Replications
+         [Replications Check,DC-DERBY] A recent replication attempt failed:
+            From DC-BOLTON to DC-DERBY
+            Naming Context: DC=ForestDnsZones,DC=bolton,DC=local
+            The replication generated an error (1722):
+            The RPC server is unavailable.
+            The failure occurred at 2026-02-21 22:25:05.
+            The last success occurred at 2026-02-21 20:55:25.
+            1 failures have occurred since the last success.
+            The source remains down. Please check the machine.
+         [Replications Check,DC-DERBY] A recent replication attempt failed:
+            From DC-BOLTON to DC-DERBY
+            Naming Context: CN=Schema,CN=Configuration,DC=bolton,DC=local
+            The replication generated an error (1722):
+            The RPC server is unavailable.
+            The failure occurred at 2026-02-21 22:24:18.
+            The last success occurred at 2026-02-21 20:55:24.
+            1 failures have occurred since the last success.
+            The source remains down. Please check the machine.
+         [Replications Check,DC-DERBY] A recent replication attempt failed:
+            From DC-BOLTON to DC-DERBY
+            Naming Context: CN=Configuration,DC=bolton,DC=local
+            The replication generated an error (1722):
+            The RPC server is unavailable.
+            The failure occurred at 2026-02-21 22:23:32.
+            The last success occurred at 2026-02-21 20:55:23.
+            1 failures have occurred since the last success.
+            The source remains down. Please check the machine.
+         [Replications Check,DC-DERBY] A recent replication attempt failed:
+            From DC-BOLTON to DC-DERBY
+            Naming Context: DC=bolton,DC=local
+            The replication generated an error (1722):
+            The RPC server is unavailable.
+            The failure occurred at 2026-02-21 22:25:51.
+            The last success occurred at 2026-02-21 20:55:25.
+            1 failures have occurred since the last success.
+            The source remains down. Please check the machine.
+         ......................... DC-DERBY failed test Replications
+      Starting test: RidManager
+         ......................... DC-DERBY passed test RidManager
+      Starting test: Services
+         ......................... DC-DERBY passed test Services
+      Starting test: SystemLog
+         A warning event occurred.  EventID: 0x80040022
+            Time Generated: 02/22/2026   06:21:56
+            Event String:
+            The driver disabled the write cache on device \Device\Harddisk0\DR0.
+         A warning event occurred.  EventID: 0x80040022
+            Time Generated: 02/22/2026   06:21:56
+            Event String:
+            The driver disabled the write cache on device \Device\Harddisk0\DR0.
+         A warning event occurred.  EventID: 0x80040022
+            Time Generated: 02/22/2026   06:21:56
+            Event String:
+            The driver disabled the write cache on device \Device\Harddisk0\DR0.
+         A warning event occurred.  EventID: 0x000003F6
+            Time Generated: 02/21/2026   22:22:25
+            Event String:
+            Name resolution for the name _ldap._tcp.dc._msdcs.derby.bolton.local. timed out after none of the configured DNS servers responded.
+         A warning event occurred.  EventID: 0x000727AA
+            Time Generated: 02/21/2026   22:22:46
+            Event String:
+            The WinRM service failed to create the following SPNs: WSMAN/DC-DERBY.derby.bolton.local; WSMAN/DC-DERBY. 
+
+         A warning event occurred.  EventID: 0x00000081
+            Time Generated: 02/21/2026   22:22:54
+            Event String:
+            NtpClient was unable to set a domain peer to use as a time source because of discovery error. NtpClient will try again in 15 minutes and double the reattempt interval thereafter. The error was: The entry is not found. (0x800706E1)
+         A warning event occurred.  EventID: 0x00000081
+            Time Generated: 02/21/2026   22:22:56
+            Event String:
+            NtpClient was unable to set a domain peer to use as a time source because of discovery error. NtpClient will try again in 15 minutes and double the reattempt interval thereafter. The error was: The entry is not found. (0x800706E1)
+         An error event occurred.  EventID: 0xC0001B61
+            Time Generated: 02/21/2026   22:23:09
+            Event String:
+            A timeout was reached (45000 milliseconds) while waiting for the ADWS service to connect.
+         An error event occurred.  EventID: 0xC0001B58
+            Time Generated: 02/21/2026   22:23:09
+            Event String:
+            The ADWS service failed to start due to the following error: 
+
+         A warning event occurred.  EventID: 0x00001695
+            Time Generated: 02/21/2026   22:25:09
+            Event String:
+            Dynamic registration or deletion of one or more DNS records associated with DNS domain 'ForestDnsZones.bolton.local.' failed.  These records are used by other computers to locate this server as a domain controller (if the specified domain is an Active Directory domain) or as an LDAP server (if the specified domain is an application partition).  
+
+         A warning event occurred.  EventID: 0x00001695
+            Time Generated: 02/21/2026   22:25:51
+            Event String:
+            Dynamic registration or deletion of one or more DNS records associated with DNS domain 'bolton.local.' failed.  These records are used by other computers to locate this server as a domain controller (if the specified domain is an Active Directory domain) or as an LDAP server (if the specified domain is an application partition).  
+
+         A warning event occurred.  EventID: 0x00002720
+            Time Generated: 02/21/2026   22:26:14
+            Event String:
+            The application-specific permission settings do not grant Local Launch permission for the COM Server application with CLSID 
+
+         ......................... DC-DERBY failed test SystemLog
+      Starting test: VerifyReferences
+         ......................... DC-DERBY passed test VerifyReferences
+   
+   
+   Running partition tests on : derby
+      Starting test: CheckSDRefDom
+         ......................... derby passed test CheckSDRefDom
+      Starting test: CrossRefValidation
+         ......................... derby passed test CrossRefValidation
+   
+   Running partition tests on : ForestDnsZones
+      Starting test: CheckSDRefDom
+         ......................... ForestDnsZones passed test CheckSDRefDom
+      Starting test: CrossRefValidation
+         ......................... ForestDnsZones passed test
+         CrossRefValidation
+   
+   Running partition tests on : Schema
+      Starting test: CheckSDRefDom
+         ......................... Schema passed test CheckSDRefDom
+      Starting test: CrossRefValidation
+         ......................... Schema passed test CrossRefValidation
+   
+   Running partition tests on : Configuration
+      Starting test: CheckSDRefDom
+         ......................... Configuration passed test CheckSDRefDom
+      Starting test: CrossRefValidation
+         ......................... Configuration passed test CrossRefValidation
+   
+   Running enterprise tests on : bolton.local
+      Starting test: LocatorCheck
+         Warning: DcGetDcName(TIME_SERVER) call failed, error 1355
+         A Time Server could not be located.
+         The server holding the PDC role is down.
+         Warning: DcGetDcName(GOOD_TIME_SERVER_PREFERRED) call failed, error
+         1355
+         A Good Time Server could not be located.
+         ......................... bolton.local failed test LocatorCheck
+      Starting test: Intersite
+         ......................... bolton.local passed test Intersite
