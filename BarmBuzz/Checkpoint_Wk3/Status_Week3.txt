@@ -1,0 +1,10 @@
+End of week 3
+
+all 4 vms are made and networked.
+DC-Bolton made root domain
+DC-Bolton promoted to child domain
+Nottingham OU made
+users and group made
+file share configured
+cross domain access tested
+FGPP made
