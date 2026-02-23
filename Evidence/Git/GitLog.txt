@@ -1,8 +1,0 @@
-﻿* d9eee6d (HEAD -> main, origin/main, origin/HEAD) Final submission ÔÇô all evidence and documentation ready
-*   ff4fdcb Merge remote-tracking branch 'origin/main'
-|\  
-| * 560000f Add README for Barnbuzz Active Directory implementation
-* | cbdbdd6 Add Git evidence and update README
-|/  
-* dbef0e3 Final submission ÔÇô all project files and evidence
-* 7226e61 Inital folder structure
