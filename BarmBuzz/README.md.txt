@@ -168,7 +168,8 @@ Scope: used on Nottingham OU which affects all users in the OU.
     Ubuntu has valid keytab "\Evidence/Screenshots/Ubuntu_Keytab.png"
 
     Ubuntu computer object exists in AD "\Evidence/Screenshots/Ubuntu_ADUC.png"
-
+    Ubuntu Ubuntu ID Use rand Getent "\Evidence\Screenshots\Ubuntu_ID_User_and_Getent.png"
+ 
     Windows server prevented access to cmd prompt "\Evidence\Screenshots\Windows_server_prevent_cmd.png"
 
     Nottingham OU management policy "\Evidence\Screenshots\Policy_management_linked.png"
@@ -188,6 +189,7 @@ Scope: used on Nottingham OU which affects all users in the OU.
     Git contribution stats ("\Evidence\Git\Stats.txt")
 
     Development reflogs ("\Evidence\Git\Reflog\")
+	
 
 10. Limitations
 
@@ -203,6 +205,7 @@ Scope: used on Nottingham OU which affects all users in the OU.
 
     Passwords – most passwords were generic; in a real life situation would need stronger passwords
 
+ 
 References
 
 Microsoft Corporation (2024) Active Directory Domain Services Overview. Available at: https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/get-started/virtual-dc/active-directory-domain-services-overview (Accessed: 22 February 2026).
